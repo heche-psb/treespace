@@ -1,0 +1,10 @@
+README.md
+setup.py
+tscommand.py
+treespace/tree.py
+treespace.egg-info/PKG-INFO
+treespace.egg-info/SOURCES.txt
+treespace.egg-info/dependency_links.txt
+treespace.egg-info/entry_points.txt
+treespace.egg-info/requires.txt
+treespace.egg-info/top_level.txt

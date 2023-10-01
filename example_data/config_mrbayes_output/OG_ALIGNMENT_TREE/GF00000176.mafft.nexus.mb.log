@@ -1,0 +1,100 @@
+
+
+                            MrBayes v3.2.6 x64
+
+                      (Bayesian Analysis of Phylogeny)
+
+              Distributed under the GNU General Public License
+
+
+               Type "help" or "help <command>" for information
+                     on the commands that are available.
+
+                   Type "about" for authorship and general
+                       information about the program.
+
+
+MrBayes > set autoclose=yes nowarn=yes
+
+   Setting autoclose to yes
+   Setting nowarnings to yes
+
+MrBayes > execute GF00000176.mafft.nexus
+
+   Executing file "GF00000176.mafft.nexus"
+   UNIX line termination
+   Longest line length = 87
+   Parsing file
+   Expecting NEXUS formatted file
+   Reading data block
+      Allocated taxon set
+      Allocated matrix
+      Defining new matrix with 2 taxa and 1330 characters
+      Data is Protein
+      Missing data coded as ?
+      Gaps coded as -
+      Taxon 1 -> MBI20337_MAGBIO
+      Taxon 2 -> MBI13065_MAGBIO
+      Successfully read matrix
+      Setting default partition (does not divide up characters)
+      Setting model defaults
+      Seed (for generating default start values) = 1696201543
+      There must be at least two included taxa, now there is only one
+      Error in command "Matrix"
+      The error occurred when reading char. 1 on line 63
+         in the file 'GF00000176.mafft.nexus'
+   Error in command "Execute"
+
+MrBayes > prset ratepr=variable
+
+   Setting Ratepr to Variable [Dirichlet(..,1,..)]
+   Successfully set prior model parameters
+   There must be at least two included taxa, now there is only one
+   Error in command "Prset"
+
+MrBayes > lset nst=6
+
+   Nst =1 unchanged because dataType is not DNA or RNA
+   Successfully set likelihood model parameters
+   There must be at least two included taxa, now there is only one
+   Error in command "Lset"
+
+MrBayes > mcmcp diagnfreq=100 samplefreq=10
+
+   Setting diagnosing frequency to 100
+   Setting sample frequency to 10
+   Successfully set chain parameters
+
+MrBayes > mcmc ngen=1100 savebrlens=yes nchains=1
+
+   Setting number of generations to 1100
+   Problem allocating moves
+   Setting number of chains to 1
+   The analysis could not be started because there was an error during its setup.
+   Refer to error messages printed during model set up to adress the problem.
+   Error in command "Mcmc"
+
+MrBayes > sumt
+
+   Summarizing trees in files "temp.run1.t" and "temp.run2.t"
+   Using relative burnin ('relburnin=yes'), discarding the first 25 % of sampled trees
+   Writing statistics to files temp.<parts|tstat|vstat|trprobs|con>
+   Examining first file ...
+   Could not open file "temp.run1.t"
+   Error in command "Sumt"
+
+MrBayes > sump
+
+   Summarizing parameters in files temp.run1.p and temp.run2.p
+   Writing summary statistics to file temp.pstat
+   Using relative burnin ('relburnin=yes'), discarding the first 25 % of samples
+   Could not open file "temp.run1.p"
+   Make sure that 'Nruns' is set correctly
+   Error in command "Sump"
+
+MrBayes > quit
+
+   Deleting previously defined characters
+   Deleting previously defined taxa
+   Quitting program
+

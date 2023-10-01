@@ -1,0 +1,415 @@
+
+
+                            MrBayes v3.2.6 x64
+
+                      (Bayesian Analysis of Phylogeny)
+
+              Distributed under the GNU General Public License
+
+
+               Type "help" or "help <command>" for information
+                     on the commands that are available.
+
+                   Type "about" for authorship and general
+                       information about the program.
+
+
+MrBayes > set autoclose=yes nowarn=yes
+
+   Setting autoclose to yes
+   Setting nowarnings to yes
+
+MrBayes > execute GF00000098.mafft.nexus
+
+   Executing file "GF00000098.mafft.nexus"
+   UNIX line termination
+   Longest line length = 196
+   Parsing file
+   Expecting NEXUS formatted file
+   Reading data block
+      Allocated taxon set
+      Allocated matrix
+      Defining new matrix with 4 taxa and 177 characters
+      Data is Protein
+      Missing data coded as ?
+      Gaps coded as -
+      Taxon 1 -> GSVIVT01001298001
+      Taxon 2 -> GSVIVT01001296001
+      Taxon 3 -> GSVIVT01001299001
+      Taxon 4 -> GSVIVT01001297001
+      Successfully read matrix
+      Setting default partition (does not divide up characters)
+      Setting model defaults
+      Seed (for generating default start values) = 1696201543
+      Setting output file names to "GF00000098.mafft.nexus.run<i>.<p|t>"
+   Exiting data block
+   Reached end of file
+
+MrBayes > prset ratepr=variable
+
+   Setting Ratepr to Variable [Dirichlet(..,1,..)]
+   Successfully set prior model parameters
+
+MrBayes > lset nst=6
+
+   Nst =1 unchanged because dataType is not DNA or RNA
+   Successfully set likelihood model parameters
+
+MrBayes > mcmcp diagnfreq=100 samplefreq=10
+
+   Setting diagnosing frequency to 100
+   Setting sample frequency to 10
+   Successfully set chain parameters
+
+MrBayes > mcmc ngen=1100 savebrlens=yes nchains=1
+
+   Setting number of generations to 1100
+   Setting number of chains to 1
+   Running Markov chain
+   MCMC stamp = 0244176273
+   Seed = 44761005
+   Swapseed = 1696201543
+   Model settings:
+
+      Data not partitioned --
+         Datatype  = Protein
+         Aamodel   = Poisson
+                     Substitution rates are fixed to be equal
+         Covarion  = No
+         # States  = 20
+                     State frequencies are fixed to be equal
+         Rates     = Equal
+
+   Active parameters: 
+
+      Parameters
+      ---------------------
+      Statefreq           1
+      Ratemultiplier      2
+      Topology            3
+      Brlens              4
+      ---------------------
+
+      1 --  Parameter  = Pi
+            Type       = Stationary state frequencies
+            Prior      = Fixed (equal frequencies)
+
+      2 --  Parameter  = Ratemultiplier
+            Type       = Partition-specific rate multiplier
+            Prior      = Dirichlet(1.00)
+
+      3 --  Parameter  = Tau
+            Type       = Topology
+            Prior      = All topologies equally probable a priori
+            Subparam.  = V
+
+      4 --  Parameter  = V
+            Type       = Branch lengths
+            Prior      = Unconstrained:GammaDir(1.0,0.1000,1.0,1.0)
+
+
+
+   The MCMC sampler will use the following moves:
+      With prob.  Chain will use move
+         1.61 %   Dirichlet(Ratemultiplier)
+         1.61 %   Slider(Ratemultiplier)
+        10.75 %   ExtSPR(Tau,V)
+        10.75 %   NNI(Tau,V)
+        10.75 %   ParsSPR(Tau,V)
+        43.01 %   Multiplier(V)
+        15.05 %   Nodeslider(V)
+         6.45 %   TLMultiplier(V)
+
+   Division 1 has 109 unique site patterns
+   Initializing conditional likelihoods
+   Using standard SSE likelihood calculator for division 1 (single-precision)
+
+   Initial log likelihoods and log prior probs for run 1:
+      Chain 1 -- -1321.542509 -- 8.977197
+
+   Initial log likelihoods and log prior probs for run 2:
+      Chain 1 -- -1338.206213 -- 8.977197
+
+
+   Using a relative burnin of 25.0 % for diagnostics
+
+   Chain results (1100 generations requested):
+
+       0 -- -1321.543 * -1338.206 
+
+   Average standard deviation of split frequencies: 0.235702
+
+   Average standard deviation of split frequencies: 0.088388
+
+   Average standard deviation of split frequencies: 0.029463
+
+   Average standard deviation of split frequencies: 0.068430
+
+   Average standard deviation of split frequencies: 0.000000
+
+   Average standard deviation of split frequencies: 0.000000
+
+   Average standard deviation of split frequencies: 0.000000
+
+   Average standard deviation of split frequencies: 0.000000
+
+   Average standard deviation of split frequencies: 0.010248
+    1000 -- -1113.504 * -1109.627 -- 0:00:00
+
+   Average standard deviation of split frequencies: 0.018608
+
+   Average standard deviation of split frequencies: 0.000000
+
+   Analysis completed in less than 1 second
+   Analysis used 0.02 seconds of CPU time
+   Likelihood of best state for run 1 was -1109.07
+   Likelihood of best state for run 2 was -1109.10
+   Acceptance rates for the moves in run 1:
+      With prob.   (last 100)   chain accepted proposals by move
+          NA           NA       Dirichlet(Ratemultiplier)
+          NA           NA       Slider(Ratemultiplier)
+          6.4 %     (  7 %)     ExtSPR(Tau,V)
+          NA           NA       NNI(Tau,V)
+          4.3 %     (  4 %)     ParsSPR(Tau,V)
+         56.5 %     ( 56 %)     Multiplier(V)
+         24.5 %     ( 29 %)     Nodeslider(V)
+          NA           NA       TLMultiplier(V)
+   Acceptance rates for the moves in run 2:
+      With prob.   (last 100)   chain accepted proposals by move
+          NA           NA       Dirichlet(Ratemultiplier)
+          NA           NA       Slider(Ratemultiplier)
+          3.9 %     (  5 %)     ExtSPR(Tau,V)
+          4.4 %     (  5 %)     NNI(Tau,V)
+          8.2 %     ( 10 %)     ParsSPR(Tau,V)
+         52.2 %     ( 51 %)     Multiplier(V)
+         24.7 %     ( 28 %)     Nodeslider(V)
+          NA           NA       TLMultiplier(V)
+
+MrBayes > sumt
+
+   Summarizing trees in files "GF00000098.mafft.nexus.run1.t" and "GF00000098.mafft.nexus.run2.t"
+   Using relative burnin ('relburnin=yes'), discarding the first 25 % of sampled trees
+   Writing statistics to files GF00000098.mafft.nexus.<parts|tstat|vstat|trprobs|con>
+   Examining first file ...
+   Found one tree block in file "GF00000098.mafft.nexus.run1.t" with 111 trees in last block
+   Expecting the same number of trees in the last tree block of all files
+
+   Tree reading status:
+
+   0      10      20      30      40      50      60      70      80      90     100
+   v-------v-------v-------v-------v-------v-------v-------v-------v-------v-------v
+   *********************************************************************************
+
+   Read a total of 222 trees in 2 files (sampling 168 of them)
+      (Each file contained 111 trees of which 84 were sampled)
+                                                                                   
+   General explanation:                                                          
+                                                                                   
+   In an unrooted tree, a taxon bipartition (split) is specified by removing a   
+   branch, thereby dividing the species into those to the left and those to the  
+   right of the branch. Here, taxa to one side of the removed branch are denoted 
+   '.' and those to the other side are denoted '*'. Specifically, the '.' symbol 
+   is used for the taxa on the same side as the outgroup.                        
+                                                                                   
+   In a rooted or clock tree, the tree is rooted using the model and not by      
+   reference to an outgroup. Each bipartition therefore corresponds to a clade,  
+   that is, a group that includes all the descendants of a particular branch in  
+   the tree.  Taxa that are included in each clade are denoted using '*', and    
+   taxa that are not included are denoted using the '.' symbol.                  
+                                                                                   
+   The output first includes a key to all the bipartitions with frequency larger 
+   or equual to (Minpartfreq) in at least one run. Minpartfreq is a parameter to 
+   sumt command and currently it is set to 0.10.  This is followed by a table  
+   with statistics for the informative bipartitions (those including at least    
+   two taxa), sorted from highest to lowest probability. For each bipartition,   
+   the table gives the number of times the partition or split was observed in all
+   runs (#obs) and the posterior probability of the bipartition (Probab.), which 
+   is the same as the split frequency. If several runs are summarized, this is   
+   followed by the minimum split frequency (Min(s)), the maximum frequency       
+   (Max(s)), and the standard deviation of frequencies (Stddev(s)) across runs.  
+   The latter value should approach 0 for all bipartitions as MCMC runs converge.
+                                                                                   
+   This is followed by a table summarizing branch lengths, node heights (if a    
+   clock model was used) and relaxed clock parameters (if a relaxed clock model  
+   was used). The mean, variance, and 95 % credible interval are given for each 
+   of these parameters. If several runs are summarized, the potential scale      
+   reduction factor (PSRF) is also given; it should approach 1 as runs converge. 
+   Node heights will take calibration points into account, if such points were   
+   used in the analysis.                                                         
+                                                                                 
+   Note that Stddev may be unreliable if the partition is not present in all     
+   runs (the last column indicates the number of runs that sampled the partition 
+   if more than one run is summarized). The PSRF is not calculated at all if     
+   the partition is not present in all runs.The PSRF is also sensitive to small  
+   sample sizes and it should only be considered a rough guide to convergence    
+   since some of the assumptions allowing one to interpret it as a true potential
+   scale reduction factor are violated in MrBayes.                               
+                                                                                 
+   List of taxa in bipartitions:                                                 
+                                                                                   
+      1 -- GSVIVT01001298001
+      2 -- GSVIVT01001296001
+      3 -- GSVIVT01001299001
+      4 -- GSVIVT01001297001
+
+   Key to taxon bipartitions (saved to file "GF00000098.mafft.nexus.parts"):
+
+   ID -- Partition
+   ----------
+    1 -- .***
+    2 -- .*..
+    3 -- ..*.
+    4 -- ...*
+    5 -- .**.
+   ----------
+
+   Summary statistics for informative taxon bipartitions
+      (saved to file "GF00000098.mafft.nexus.tstat"):
+
+   ID   #obs    Probab.     Sd(s)+      Min(s)      Max(s)   Nruns 
+   ----------------------------------------------------------------
+    5   164    0.976190    0.000000    0.976190    0.976190    2
+   ----------------------------------------------------------------
+   + Convergence diagnostic (standard deviation of split frequencies)
+     should approach 0.0 as runs converge.
+
+
+   Summary statistics for branch and node parameters
+      (saved to file "GF00000098.mafft.nexus.vstat"):
+
+                                          95% HPD Interval
+                                        --------------------
+   Parameter      Mean       Variance     Lower       Upper       Median     PSRF+  Nruns
+   -------------------------------------------------------------------------------------
+   length[1]    0.710522    0.011927    0.495751    0.885276    0.728493    1.088    2
+   length[2]    0.276170    0.003061    0.174750    0.365418    0.278773    0.996    2
+   length[3]    0.180833    0.002121    0.082231    0.255156    0.183380    1.002    2
+   length[4]    0.072148    0.001680    0.017866    0.152768    0.068001    1.014    2
+   length[5]    0.095440    0.001536    0.021048    0.171011    0.095601    1.081    2
+   -------------------------------------------------------------------------------------
+   + Convergence diagnostic (PSRF = Potential Scale Reduction Factor; Gelman
+     and Rubin, 1992) should approach 1.0 as runs converge. NA is reported when
+     deviation of parameter values within all runs is 0 or when a parameter
+     value (a branch length, for instance) is not sampled in all runs.
+
+
+   Summary statistics for partitions with frequency >= 0.10 in at least one run:
+       Average standard deviation of split frequencies = 0.000000
+       Maximum standard deviation of split frequencies = 0.000000
+       Average PSRF for parameter values (excluding NA and >10.0) = 1.036
+       Maximum PSRF for parameter values = 1.088
+
+
+   Clade credibility values:
+
+   /---------------------------------------------------------- GSVIVT010012980~ (1)
+   |                                                                               
+   |---------------------------------------------------------- GSVIVT010012970~ (4)
+   +                                                                               
+   |                            /----------------------------- GSVIVT010012960~ (2)
+   \-------------98-------------+                                                  
+                                \----------------------------- GSVIVT010012990~ (3)
+                                                                                   
+
+   Phylogram (based on average branch lengths):
+
+   /---------------------------------------------------------- GSVIVT010012980~ (1)
+   |                                                                               
+   |----- GSVIVT010012970~ (4)
+   +                                                                               
+   |       /---------------------- GSVIVT010012960~ (2)
+   \-------+                                                                       
+           \-------------- GSVIVT010012990~ (3)
+                                                                                   
+   |--------------| 0.200 expected changes per site
+
+   Calculating tree probabilities...
+
+   Credible sets of trees (2 trees sampled):
+      99 % credible set contains 2 trees
+
+
+MrBayes > sump
+
+   Summarizing parameters in files GF00000098.mafft.nexus.run1.p and GF00000098.mafft.nexus.run2.p
+   Writing summary statistics to file GF00000098.mafft.nexus.pstat
+   Using relative burnin ('relburnin=yes'), discarding the first 25 % of samples
+
+   Below are rough plots of the generation (x-axis) versus the log   
+   probability of observing the data (y-axis). You can use these     
+   graphs to determine what the burn in for your analysis should be. 
+   When the log probability starts to plateau you may be at station- 
+   arity. Sample trees and parameters after the log probability      
+   plateaus. Of course, this is not a guarantee that you are at sta- 
+   tionarity. Also examine the convergence diagnostics provided by   
+   the 'sump' and 'sumt' commands for all the parameters in your     
+   model. Remember that the burn in is the number of samples to dis- 
+   card. There are a total of ngen / samplefreq samples taken during 
+   a MCMC analysis.                                                  
+
+   Overlay plot for both runs:
+   (1 = Run number 1; 2 = Run number 2; * = Both runs)
+
+   +------------------------------------------------------------+ -1109.23
+   |2      2 *222    1              *1122        22 2   21     2|
+   |       1* 1  22 1 1 21 ***   112 2    22     1 2   2 221 *  |
+   |      2    1       1 2    2       211211          2   1 1 2 |
+   |    22      11 1 2221 *   121  1     1  2  11  112     22   |
+   |   2  1       12           1222               1    11      1|
+   | *2  1          2                       1 1      1          |
+   |1                                        *2 2             1 |
+   |                                                  1         |
+   |                                           2                |
+   |                                                            |
+   |                                                            |
+   |                                                            |
+   |  1 1                                                       |
+   |                                                            |
+   |   1                                                        |
+   +------+-----+-----+-----+-----+-----+-----+-----+-----+-----+ -1120.68
+   ^                                                            ^
+   270                                                          1100
+
+
+   Estimated marginal likelihoods for runs sampled in files
+      "GF00000098.mafft.nexus.run1.p" and "GF00000098.mafft.nexus.run2.p":
+      (Use the harmonic mean for Bayes factor comparisons of models)
+
+      (Values are saved to the file GF00000098.mafft.nexus.lstat)
+
+   Run   Arithmetic mean   Harmonic mean
+   --------------------------------------
+     1      -1110.95         -1117.26
+     2      -1110.40         -1113.46
+   --------------------------------------
+   TOTAL    -1110.63         -1116.59
+   --------------------------------------
+
+
+   Model parameter summaries over the runs sampled in files
+      "GF00000098.mafft.nexus.run1.p" and "GF00000098.mafft.nexus.run2.p":
+      Summaries are based on a total of 168 samples from 2 runs.
+      Each run produced 111 samples of which 84 samples were included.
+      Parameter summaries saved to file "GF00000098.mafft.nexus.pstat".
+
+                                         95% HPD Interval
+                                       --------------------
+   Parameter      Mean      Variance     Lower       Upper       Median    min ESS*  avg ESS    PSRF+ 
+   --------------------------------------------------------------------------------------------------
+   TL          1.335065    0.022803    0.981787    1.572371    1.327620     10.44     16.99    1.068
+   m{1}        0.970408    0.002767    0.908022    1.088715    0.967004      5.76      6.58    1.577
+   --------------------------------------------------------------------------------------------------
+   * Convergence diagnostic (ESS = Estimated Sample Size); min and avg values
+     correspond to minimal and average ESS among runs. 
+     ESS value below 100 may indicate that the parameter is undersampled. 
+   + Convergence diagnostic (PSRF = Potential Scale Reduction Factor; Gelman
+     and Rubin, 1992) should approach 1.0 as runs converge.
+
+
+
+MrBayes > quit
+
+   Deleting previously defined characters
+   Deleting previously defined taxa
+   Quitting program
+

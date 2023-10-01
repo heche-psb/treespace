@@ -1,0 +1,20 @@
+#NEXUS
+[ID: 0244176273]
+begin taxa;
+	dimensions ntax=4;
+	taxlabels
+		GSVIVT01001298001
+		GSVIVT01001296001
+		GSVIVT01001299001
+		GSVIVT01001297001
+		;
+end;
+begin trees;
+	translate
+		1	GSVIVT01001298001,
+		2	GSVIVT01001296001,
+		3	GSVIVT01001299001,
+		4	GSVIVT01001297001
+		;
+   tree con_50_majrule = [&U] (1[&prob=1.00000000e+00,prob_stddev=0.00000000e+00,prob_range={1.00000000e+00,1.00000000e+00},prob(percent)="100",prob+-sd="100+-0"]:7.284927e-01[&length_mean=7.10521605e-01,length_median=7.28492700e-01,length_95%HPD={4.95751400e-01,8.85275700e-01}],4[&prob=1.00000000e+00,prob_stddev=0.00000000e+00,prob_range={1.00000000e+00,1.00000000e+00},prob(percent)="100",prob+-sd="100+-0"]:6.800087e-02[&length_mean=7.21482885e-02,length_median=6.80008700e-02,length_95%HPD={1.78658100e-02,1.52768000e-01}],(2[&prob=1.00000000e+00,prob_stddev=0.00000000e+00,prob_range={1.00000000e+00,1.00000000e+00},prob(percent)="100",prob+-sd="100+-0"]:2.787727e-01[&length_mean=2.76169796e-01,length_median=2.78772700e-01,length_95%HPD={1.74749700e-01,3.65417900e-01}],3[&prob=1.00000000e+00,prob_stddev=0.00000000e+00,prob_range={1.00000000e+00,1.00000000e+00},prob(percent)="100",prob+-sd="100+-0"]:1.833796e-01[&length_mean=1.80833258e-01,length_median=1.83379600e-01,length_95%HPD={8.22307400e-02,2.55156400e-01}])[&prob=9.76190476e-01,prob_stddev=0.00000000e+00,prob_range={9.76190476e-01,9.76190476e-01},prob(percent)="98",prob+-sd="98+-0"]:9.560050e-02[&length_mean=9.54402574e-02,length_median=9.56005000e-02,length_95%HPD={2.10481300e-02,1.71011000e-01}]);
+end;

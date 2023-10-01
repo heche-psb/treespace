@@ -1,0 +1,16 @@
+IQ-TREE multicore version 1.6.1 for Linux 64-bit built Feb 16 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    HengchiChen (AVX512, FMA3, 7 GB RAM)
+Command: iqtree -s config_iqtree_seqfam_output/OG_ALIGNMENT_TREE/GF00000176.mafft -bnni -abayes
+Seed:    394623 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Oct  2 01:06:20 2023
+Kernel:  AVX+FMA - 1 threads (8 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 8 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file config_iqtree_seqfam_output/OG_ALIGNMENT_TREE/GF00000176.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+ERROR: Alignment must have at least 3 sequences

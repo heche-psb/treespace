@@ -1,0 +1,11 @@
+Orthogroup path:	./Orthogroups.tsv
+Sequences directory:	./Sequences_fam
+Sequences form:	family	[species/family]
+Sequences type:	nucleotide	[nucleotide/peptide]
+Translation:	yes	[yes/no]
+Translation parameters:	False,False	[to_stop,cds]
+Number of threads:	4
+Aligner:	mafft	[mafft/muscle/prank]
+Aligner parameters:	default
+Tree algorithm:	iqtree	[fasttree/iqtree/iqtree2/mrbayes]
+Tree algorithm parameters:	-bnni,-abayes

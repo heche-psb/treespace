@@ -1,0 +1,9 @@
+set autoclose=yes nowarn=yes
+execute GF00000176.mafft.nexus
+prset ratepr=variable
+lset nst=6
+mcmcp diagnfreq=100 samplefreq=10
+mcmc ngen=1100 savebrlens=yes nchains=1
+sumt
+sump
+quit
